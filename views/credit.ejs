@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Management</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/Mange.css">
+    
+</head>
+<body style="text-align: center;">
+	
+  <div id="list">
+  <h1 style="background-color: red; color: white; border-radius: 5px; padding: 3px;">Enter the amount to transfer</h1>
+  <form action="/transfer/<%=ID%>" method="POST">
+      <h4 style="color: black font:sans-serif;">DETAILS:<br> NAME: <span style="color: white"><%= men.name%></span><br>  EMAIL ID: <span style="color: white"><%= men.Email%></span><br>  CREDIT:  <span style="color: white"><%= men.Credit%></span></h4>
+    <input type="text" name="Amount" placeholder=" Enter the amount">
+    <button type="submit" class="btn btn-success">Transfer</button>
+  </form>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
