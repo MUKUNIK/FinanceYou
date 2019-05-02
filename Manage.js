@@ -3,9 +3,9 @@ var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 mongoose.connect("mongodb://localhost/Mange",{useNewUrlParser:true});
 
-
+/*
 var http = require('http');
-var fs = require('fs');
+var fs = require('fs');*/
 app = express();
 app.use(bodyparser.urlencoded({extended:true}));
 
@@ -102,9 +102,7 @@ var name=req.body.namedata;
 	res.redirect("/credit");
 })*/
 
-app.listen(9000, function(){
-     console.log("Server is listening");
- });
+app.listen(process.env.PORT,process.env.IP);
 
 
 
