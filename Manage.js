@@ -1,8 +1,11 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
-mongoose.connect("mongodb://localhost/Mange",{useNewUrlParser:true});
-
+mongoose.connect("mongodb+srv://Nikhil:man@cluster0-f1ejb.mongodb.net/test?retryWrites=true", function(err, db) {
+    if(err){
+    	console.log(err);
+    }
+    });
 /*
 var http = require('http');
 var fs = require('fs');*/
