@@ -43,7 +43,7 @@ app.get("/userlist", function(req,res){
 		if(err)
 			res.json(err);
 		else
-			res.render("Userslist",{men:docs})
+			res.render("Userslist",{men:docs});
 	});
 });
 
@@ -57,7 +57,7 @@ console.log(id,amout);
 		if(err)
 			res.json(err);
 		else
-			res.render("Userscutlist",{men:docs,amounttocut:amout,fromid:id})
+			res.render("Userscutlist",{men:docs,amounttocut:amout,fromid:id});
 
 	});
 });
@@ -74,7 +74,7 @@ Man.findOneAndUpdate({ "_id": id },
  console.log("Error");
 } 
 });
-console.log("First")
+console.log("First");
 
 Man.findOneAndUpdate({ "_id": fromid },
     { "$inc": { "Credit": -(amount) } },{new:true},function(err, response) {
@@ -83,7 +83,7 @@ Man.findOneAndUpdate({ "_id": fromid },
 } 
 });
 
-console.log("attempted")
+console.log("attempted");
 res.redirect("/userlist");
 });
 
@@ -94,7 +94,7 @@ res.redirect("/userlist");
 		if(err)
 			res.json(err);
 		else
-			res.render("credit",{men:docs,ID:id})
+			res.render("credit",{men:docs,ID:id});
 
 	});
 });
