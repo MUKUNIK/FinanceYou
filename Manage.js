@@ -108,7 +108,7 @@ var name=req.body.namedata;
 	res.redirect("/credit");
 })*/
 
-app.listen(process.env,PORT,process.env.IP);
+app.listen(process.env.PORT,process.env.IP);
 
 
 
