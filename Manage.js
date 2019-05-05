@@ -37,7 +37,10 @@ app.get("/", function(req, res){
 	res.render("Manage");
 });
 
-
+app.get("/userlist", function(req,res){
+	res.render("Userslist");
+});
+/*
 app.get("/userlist", function(req,res){
 	Man.find({}, function(err,docs){
 		if(err)
@@ -45,7 +48,7 @@ app.get("/userlist", function(req,res){
 		else
 			res.render("Userslist",{men:docs});
 	});
-});
+});*/
 
 
 app.post("/transfer/:ID",function(req,res){
@@ -105,7 +108,7 @@ var name=req.body.namedata;
 	res.redirect("/credit");
 })*/
 
-app.listen(process.env.PORT,process.env.IP);
+app.listen(process.env,PORT,process.env.IP);
 
 
 
